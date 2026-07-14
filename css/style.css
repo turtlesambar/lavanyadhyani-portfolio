@@ -1703,3 +1703,50 @@ soda-problem-list {
 soda-problem-list li {
 margin-: 0.75rem;
 }
+
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    width: 56px;
+    height: 56px;
+
+   
+    border-radius: 50%;
+
+   background: white;
+border: 2px solid #303030;
+color: #303030;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-4px);
+}

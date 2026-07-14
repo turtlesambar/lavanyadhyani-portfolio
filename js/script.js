@@ -234,18 +234,25 @@ aboutObserver.observe(aboutHeading);
 
 
 
-const skillsHeading = document.querySelector(".skills-text h2");
 
-const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            skillsObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.5
+
+
+const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+
 });
 
-skillsObserver.observe(skillsHeading);
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 });
