@@ -423,6 +423,24 @@ body.menu-open {
 }
 
 /* ---------- 8. HERO ---------- */
+.hero-heading {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: heroFadeUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .hero {
   display: flex;
@@ -467,6 +485,24 @@ align-items:center;
 .flower-strip--bottom {
   margin-top: 1.5rem;
 }
+.flower-gif {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: flowerReveal 0.9s cubic-bezier(.16,1,.3,1) forwards;
+    animation-delay: 0.45s;
+}
+
+@keyframes flowerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .h1-title {
   display: flex;
@@ -497,6 +533,42 @@ align-items:center;
   font-weight: 500;
   margin-bottom: 1rem;
   text-align: center;
+}
+.eyebrow {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: eyebrowReveal 0.6s ease-out forwards;
+}
+
+.hero-heading {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: heroReveal 0.9s ease-out forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes eyebrowReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ---- BUT HOW DO I DO IT ---- */
@@ -530,6 +602,31 @@ align-items:center;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+.how-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s cubic-bezier(.16,1,.3,1),
+        transform 0.8s cubic-bezier(.16,1,.3,1);
+}
+
+.how-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .how-icon {
@@ -574,6 +671,7 @@ align-items:center;
     height: 120px;
   }
 }
+
 
 /* ---------- 9. SECTION INTROS (shared by Ux Design / Creative Lab) ---------- */
 
@@ -849,6 +947,53 @@ opacity: 1;
   }
 }
 
+.creative-lab .section-intro h2 {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease-in-out,
+        transform 0.8s ease-in-out;
+}
+
+.creative-lab .section-intro h2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text h2 {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease-in-out,
+        transform 0.8s ease-in-out;
+}
+
+.about-text h2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+
+    animation: heroReveal 1s ease-out forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* =========================================================
    BREAKPOINT: 1024px and up (desktop)
    - Full inline nav replaces the hamburger
@@ -884,16 +1029,38 @@ opacity: 1;
     flex-direction: row;
     align-items: center;
     gap: 3rem;
+    
   }
 
-  .project-image-link,
-  .project-image {
+ .project-image-link {
     flex: 0 0 45%;
-  }
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
+.project-image {
+    width: 100%;
+    display: block;
+}
+
+.project-image-link.show {
+    opacity: 1;
+}
   .project-content {
     flex: 1;
-  }
+     opacity: 0;
+    transform: translateX(80px);
+
+    transition:
+        opacity 1s ease-in-out,
+        transform 1s ease-in-out;
+}
+
+.project-content.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+  
 
   /* Meet the Designer: two columns */
   .about-inner {

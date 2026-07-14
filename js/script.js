@@ -147,5 +147,105 @@ camera.addEventListener("click", () => {
 
 })();
 
+const howItems = document.querySelectorAll(".how-item");
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            howItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("show");
+                }, index * 500);
+            });
+
+            observer.disconnect(); // only run once
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+observer.observe(document.querySelector(".how-section"));
+
+const projects = document.querySelectorAll(".project-card");
+
+const projectObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const image = entry.target.querySelector(".project-image-link");
+            const text = entry.target.querySelector(".project-content");
+
+            image.classList.add("show");
+
+            setTimeout(() => {
+                text.classList.add("show");
+            }, 250);
+
+            projectObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.3
+});
+
+projects.forEach(project => {
+    projectObserver.observe(project);
+});
+const creativeHeading = document.querySelector(".creative-lab .section-intro h2");
+
+const creativeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            creativeObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+creativeObserver.observe(creativeHeading);
+
+
+const aboutHeading = document.querySelector(".about-text h2");
+
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            aboutObserver.unobserve(entry.target);
+        }
+
+    });
+}, {
+    threshold: 0.5
+});
+
+aboutObserver.observe(aboutHeading);
+
+
+
+
+const skillsHeading = document.querySelector(".skills-text h2");
+
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            skillsObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+skillsObserver.observe(skillsHeading);
 });
