@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soda Shake Race — UX Case Study | Lavanya Dhyani</title>
+  <meta name="description" content="A UX case study reimagining how Samsung handles software update permissions — less jarring, more transparent, and better for the user.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+ 
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="dot-grid-bg" aria-hidden="true"></div>
+
+ <!-- ============ HEADER / NAV (fixed on every breakpoint) ============ -->
+  <header class="site-header" id="top">
+    <div class="nav-pill">
+
+      <a class="logo" href="#hero-content" aria-label="Lavanya, back to top of page">
+        <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <img src="assets/images/logo.svg" alt="hand caricature that waves at you">
+        </svg>
+        <span class="logo-text">Lavanya</span>
+      </a>
+
+      <!-- Visible inline on desktop, hidden below 1024px -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#ux-design">Ux Design</a></li>
+          <li><a href="#creative-lab">Creative lab</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
+        </ul>
+      </nav>
+
+      <!-- Visible below 1024px, hidden on desktop -->
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="hamburger-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ============ MOBILE / TABLET SLIDE-IN MENU ============ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <a class="logo logo--light" href="#top" aria-label="Lavanya, back to top of page">
+          <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+             <img src="assets/images/logo.svg" alt="hand caricature that waves at you">
+          </svg>
+          <span class="logo-text">Lavanya</span>
+        </a>
+        <button type="button" class="menu-close" id="menu-close" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav aria-label="Mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="#ux-design">Ux Design</a></li>
+          <li><a href="#creative-lab">Creative lab</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="cs-hero">
+   
+
+      <div class="cs-hero-inner">
+
+        <div class="cs-hero-text">
+          <a class="cs-back" href="index.html" aria-label="Back to portfolio">
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none">
+              <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back
+          </a>
+          <h1>Easy to learn. Impossible to put down.</h1>
+          <ul class="cs-meta-list">
+            <li><span class="meta-label">Role:</span> Ux/UI Design, Research, Prototype, Illustration</li>
+            <li><span class="meta-label">Duration:</span> 15 Days</li>
+            <li><span class="meta-label">Team:</span> Solo</li>
+          </ul>
+        </div>
+
+        <!-- Replace placeholder with your phone mockup PNG (transparent bg) -->
+        <div class="cs-hero-img-wrap">
+          <img src="./assets/images/SodaShake/SodaShakeHero image.png" alt="Soda Shake race game shown on a phone Mock up with 3 soda cans behind the phone" loading="eager">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CURRENT AUTO UPDATE FEATURE FLOW ===== -->
+    <section class="cs-section" aria-labelledby="flow-heading">
+      <div class="cs-inner">
+        <h2 id="flow-heading">Project Background</h2>
+        <p class="cs-desc">Soda Shake Race is a casual, group-based mobile game where players compete by rapidly shaking/tapping to fizz up a soda can and achieve the highest score.
+
+The project focused on designing an experience that is instantly understandable, socially engaging, and highly replay-able.
+<br>The low fidelity flows designed by the client had a lot of gaps that were identified: </p>
+        
+
+
+
+        <!-- Horizontal scrollable row of phone screenshots -->
+        <div class="cs-flow-row" role="list" aria-label="Current Samsung update flow screenshots">
+          <figure class="cs-flow-item" role="listitem">
+            <img src="./assets/images//SodaShake/soda shake 1.png" alt="1. User uses the device" loading="lazy">
+            <figcaption>The vibe of the game isn't reflected from the first screen.</figcaption>
+          </figure>
+          <figure class="cs-flow-item" role="listitem">
+            <img src="./assets/images/SodaShake/soda shake 2.png" alt="Step 2: Update pop-up which appears unexpectedly" loading="lazy">
+            <figcaption>Its unclear how to proceed.</figcaption>
+          </figure>
+          <figure class="cs-flow-item" role="listitem">
+            <img src="./assets/images/SodaShake/soda shake 3.png" alt="Step 3: No cancel or reschedule option available" loading="lazy">
+            <figcaption>The settings are not easily accessible.</figcaption>
+          </figure>
+           <figure class="cs-flow-item" role="listitem">
+            <img src="./assets/images/SodaShake/soda shake 4.png" alt="Step 4: Forced restart required" loading="lazy">
+            <figcaption>There is no sense of accomplishment after the game is over.</figcaption>
+          </figure>
+          
+        </div>
+      </div>
+    </section>
+
+    <! User research== > 
+
+    <section class="friction-section">
+
+    <h2>Where is the friction?</h2>
+
+    <p class="friction-intro">
+        After interviewing some users and also doing some secondary research,
+        there were some friction points users that came up.
+    </p>
+
+    <!-- Keith Persona -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/Aaron (1).PNG" alt="illustration of a woman trying to book a taxi through app but accidentally clicking auto-update button instead">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+                "I love party games, but if I spend more time figuring out how to play than actually playing,
+                I lose interest pretty quickly."
+            </blockquote>
+
+            <p class="person-info">
+                -Keith, 19 years old, Design Student
+            </p>
+
+            <ul>
+                <li>Players want to start playing immediately with little to no onboarding.</li>
+                <li>Players expect rewarding visual feedback and satisfying interactions.</li>
+                <li> Clear score tracking and progression encourage repeat play and friendly competition.</li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <!-- Preesha Persona -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/Presha.PNG" alt="Illustration of a guy confused about what the update is for and what it will change in his phone">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+                "When friends come over, I want a game we can jump into immediately. If I have to explain rules for five minutes or ask everyone to buy the game, 
+                we usually just give up and do something else."
+            </blockquote>
+
+            <p class="person-info">
+                Preesha, 24 years old, Young Professional
+            </p>
+
+            <ul>
+                <li>Many multiplayer games require multiple purchases or installations.</li>
+                <li>Complex rules create friction for non-gamers and casual players.</li>
+                <li>Complex rules create friction for non-gamers and casual players.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Martin Persona -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/Martin.PNG"  alt="Illustration of a person frustrated with frequent update pop-ups">
+           
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+                "Sometimes I only have ten minutes between classes or during my commute. 
+                If a game takes too long to start or explain, I won't bother opening it."
+            </blockquote>
+
+            <p class="person-info">
+                Martin, 22 years old, Student
+            </p>
+
+            <ul>
+                <li>Lengthy tutorials create barriers to quick engagement.</li>
+                <li>Players want meaningful gameplay in short sessions.</li>
+                <li>Fast restart loops increase replay-ability and retention.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+    
+    <!-- ===== USER GOALS / BUSINESS GOALS ===== -->
+    <section class="cs-section" aria-labelledby="goals-heading">
+      <div class="cs-inner">
+        <div class="cs-goals-grid">
+          <div>
+            <h2 id="goals-heading">User Goals</h2>
+            <p>We need to make players feel included, excited, and immediately ready to play.</p>
+            <ul class="cs-goal-list">
+              <li>Start playing within seconds without lengthy tutorials.</li>
+              <li>Enjoy satisfying interactions and playful visual feedback.</li>
+              <li>Play with friends regardless of gaming experience.</li>
+              <li>Experience low cognitive load and simple gameplay.</li>
+              <li> Feel motivated to replay through competition and score tracking. </li>
+              </li>
+
+            </ul>
+          </div>
+          <div>
+            <h2>Business Goals</h2>
+            <p>Soda Shake Race needs to attract players quickly and encourage repeat sessions.</p>
+            <ul class="cs-goal-list">
+              <li>Reduce onboarding friction and time-to-first-game.</li>
+              <li>Increase replayability through short gameplay loops.</li>
+              <li>Improve player retention through rewarding feedback systems.</li>
+              <li>Create a memorable experience that players want to return to.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESIGN PROCESS ===== -->
+    <section class="friction-section">
+
+    <h2>Design Process</h2>
+
+    <p class="friction-intro">
+        After identifying the friction points, I started to ideate and create a prototype for the redesign of the auto-update feature. Through the process, I focused on making the update flow more transparent, giving users autonomy, and easing them into the update screen.
+    </p>
+
+    <!-- Home Screen -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/HomeScreen Mokcup.png" alt="Home screen mockup showing a vending machine with a settings button and a leaderboard button.">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+           <div class="friction-images">
+            <img  class="wireframe-image" src="assets/images/SodaShake/Rough wireframe 1.png" alt="Home screen rough wireframe showing a vending machine with a settings button and a leaderboard button.">
+            
+        </div>
+
+
+            <blockquote class="Friction-quote">
+                Main Home Screen 
+            </blockquote>
+            <ul>
+                <li>The Initial Home screen had a settings button that felt too clunky, so I used a icon button instead alongside a leaderboard icon. This way all major information is easily accessible. </li>
+                <li>For the visual I explored different variations and settled on a Vending machine taking up the majority of the screen.</li>
+                <li>Circle Play was a multiplayer mode that was still in development. The aim of this project was to ideate the basic gameplay mechanics.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Game Play Screen -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/GameScreenMockup.png" alt="Game play screen mockup">
+             <img src="assets/images/SodaShake/GameScreenMockup2.2.png" alt="Game play screen mockup with a bubble bar and a score counter">
+             
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+          <img  class="wireframe-image" src="assets/images/SodaShake/GameScreenWireframe.png" alt="Game play screen rough wireframe showing a can in center and a bubble bar.">
+
+            <blockquote class="Friction-quote">
+               Game Play Screen
+            </blockquote>
+             <ul>
+                <li>I kept the game play screen simple.</li>
+                <li>There was also an inclination to avoid any tutorials and keep the onboarding very self explanatory. </li>
+                <li> As the player taps the can, the game starts instantly. 
+                  Bubbles rise through a progress bar while visual feedback rewards every interaction, 
+                  making the mechanic feel satisfying and responsive.</li>
+              </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Game Over -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+          <img src="assets/images/SodaShake/GameScreenMockup3.png" alt="Bubbles filling up the Screen to transition into the Game over Screen">
+            <img src="assets/images/SodaShake/GameScreenMockup4.png" alt="Game Over screen with a Crushed Can and a score counter">
+           
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+          <img  class="wireframe-image" src="assets/images/SodaShake/GameOverWireframe.png" alt="Game over screen rough wireframe showing a crushed can and a score counter.">
+          <blockquote class="Friction-quote">
+               Game Over Screen
+            </blockquote>
+
+            <ul>
+                <li>Once the progress bar is full, the game ends and entire screen is overed with bubbles to transition to the Game over Screen</li>
+                <li> The game Over screen includes a summary of the player's performance and options to restart or exit. I also kept the visual of a crushed can consistent with the low fidelity prototype provided by the client.</li>
+                
+            </ul>
+
+        </div>
+
+    </div>
+    
+    <!-- POINT 4 -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/GameScreenMockup5.png" alt="Mock up of Leader board screen showing a list of players and their scores">
+            <img src="assets/images/SodaShake/GameScreenMockup6.png" alt="mock up of Leader board screen showing a list of players and their scores, highlighting the top 3 players with a gold, silver and bronze medal">
+           
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+        
+        <div class="friction-content">
+          <img  class="wireframe-image" src="assets/images/SodaShake/Leaderboard Wireframe.png" alt="Leaderboard screen rough wireframe showing a list of players and their scores.">
+          <blockquote class="Friction-quote">
+             Leaderboard Screen
+            </blockquote>
+
+            <ul>
+                <li>Initially, I kept the leader board design similar to casual games that are popular among the target audience. </li>
+                <li> However, Since the game doesn't have complicated mechanics, I wanted to aim to reach a sense of achievement for the players by Highlight the first three top winners of the Leaderboard.</li>
+                
+            </ul>
+
+        </div>
+
+    </div>
+       
+    <!-- POINT 5 -->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/SodaShake/GameScreenMockup7.png" alt="Mock up of Leader board screen showing a list of players and their scores">
+            <img src="assets/images/SodaShake/GameScreenMockup8.png" alt="mock up of Leader board screen showing a list of players and their scores, highlighting the top 3 players with a gold, silver and bronze medal">
+           
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+        
+        <div class="friction-content">
+          <img  class="wireframe-image" src="assets/images/SodaShake/Settings Wire Frames.png" alt="Settings screen rough wireframe showing the available options for the user.">
+          <blockquote class="Friction-quote">
+             Settings Screen
+            </blockquote>
+
+            <ul>
+                <li>One of the two versions of the Settings page was designed to mimic a vending machine. However, this approach didn't help in highlighting the focal point. </li>
+                <li> The other version focused on a clean, minimal design that prioritized the available options for the user. This way even people with color/minimal visual disabilities can easily differentiate between the selected can and non-selected cans.</li>
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+      
+</section>
+
+    <!-- ===== USABILITY TESTING ===== -->
+    <section class="cs-section" aria-labelledby="usability-heading">
+      <div class="cs-inner">
+        <h2 id="usability-heading">Usability testing</h2>
+        <p class="cs-desc">I showed these prototypes to potential players ranging from regular gamers to people who rarely play mobile games. The goal was to understand whether players could start playing quickly without 
+          additional explanation and whether the feedback system felt rewarding. </p>
+
+        <blockquote class="cs-pull-quote">
+          <p>I liked that I could understand what to do immediately without anyone explaining the game to me. The bubbles and illustrations made it feel satisfying as I progressed through the game.</p>
+          <cite>— Usability test participant</cite>
+        </blockquote>
+
+        <p class="cs-desc">Participants understood the core gameplay mechanic within the first ten seconds of interaction. One participant suggested introducing a short visual countdown before the game begins to better prepare players for the race.</p>
+      </div>
+    </section>
+
+    <!-- ===== FINAL DESIGN ===== -->
+    <section class="final-des-section" aria-labelledby="final-heading">
+      <div class="finaldes-inner">
+        <h2 id="final-heading">Final Design</h2>
+ 
+
+        <!-- Final screen grid (phone mockups) -->
+         <div class="finaldes-grid" aria="list" alt="Final design mockups">
+          <img src="assets/images/SodaShake/HomeScreen Mokcup.png" alt="Home screen mockup showing a vending machine with a settings button and a leaderboard button.">
+         </div>
+        
+        </div>
+        
+    </section>
+
+    <!-- ===== IMPACT & REFLECTIONS ===== -->
+    <section class="cs-section" aria-labelledby="impact-heading">
+      <div class="cs-inner">
+        <div class="cs-two-col">
+          <div>
+            <h2 id="impact-heading">Impact</h2>
+            <ul class="cs-bullet-list">
+              <li>Users have more control over when updates are installed</li>
+              <li>Clear transparency reduces "why is this happening" anxiety</li>
+              <li>A softer transition improves the overall user experience</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Reflections</h2>
+            <p>This project showed me how much friction can live in the gap between intent and language. Samsung wants users to stay secure, but the UX communicates control, not care. The redesign doesn't change the technology; it only changes the conversation the phone has with the user.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH SCOPE ===== -->
+    <section class="cs-section" aria-labelledby="research-heading">
+      <div class="cs-inner">
+        <h2 id="research-heading">Research Scope</h2>
+      <p> This study focuses on the Samsung devices available to me, primarily mid-range Galaxy phones.
+ Future iterations would benefit from testing across a wider range of Samsung devices and One UI versions to validate whether these findings remain consistent across the ecosystem.</p>
+            
+    </section>
+
+  </main>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/slow-scroll.js"></script>
+</body>
+</html>
