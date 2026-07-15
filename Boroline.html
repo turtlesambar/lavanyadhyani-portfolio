@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boroline — UX Case Study | Lavanya Dhyani</title>
+  <meta name="description" content="A UX case study reimagining how Samsung handles software update permissions — less jarring, more transparent, and better for the user.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+ 
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="dot-grid-bg" aria-hidden="true"></div>
+
+ <!-- ============ HEADER / NAV (fixed on every breakpoint) ============ -->
+  <header class="site-header" id="top">
+    <div class="nav-pill">
+
+      <a class="logo" href="#hero-content" aria-label="Lavanya, back to top of page">
+        <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <img src="assets/images/logo.svg" alt="hand caricature that waves at you">
+        </svg>
+        <span class="logo-text">Lavanya</span>
+      </a>
+
+      <!-- Visible inline on desktop, hidden below 1024px -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#ux-design">Ux Design</a></li>
+          <li><a href="index.html#creative-lab">Creative lab</a></li>
+          <li><a href="index.html#about">About me</a></li>
+          <li><a href="index.html#contact-me">Contact me</a></li>
+        </ul>
+      </nav>
+
+      <!-- Visible below 1024px, hidden on desktop -->
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="hamburger-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ============ MOBILE / TABLET SLIDE-IN MENU ============ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <a class="logo logo--light" href="#top" aria-label="Lavanya, back to top of page">
+          <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+             <img src="assets/images/logo.svg" alt="hand caricature that waves at you">
+          </svg>
+          <span class="logo-text">Lavanya</span>
+        </a>
+        <button type="button" class="menu-close" id="menu-close" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav aria-label="Mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html#ux-design">Ux Design</a></li>
+          <li><a href="index.html#creative-lab">Creative lab</a></li>
+          <li><a href="index.html#about">About me</a></li>
+          <li><a href="index.html#contact-me">Contact me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="cs-hero">
+   
+
+      <div class="cs-hero-inner">
+
+        <div class="cs-hero-text">
+          <a class="cs-back" href="index.html" aria-label="Back to portfolio">
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false" fill="none">
+              <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back
+          </a>
+          <h1>Reimagining a legacy brand for the modern web.</h1>
+          <ul class="cs-meta-list">
+            <li><span class="meta-label">Role:</span> Ux/UI Design</li>
+            <li><span class="meta-label">Duration:</span> 5 Days</li>
+            <li><span class="meta-label">Team:</span> Solo</li>
+          </ul>
+        </div>
+
+        <!-- Replace placeholder with your phone mockup PNG (transparent bg) -->
+        <div class="cs-hero-img-wrap">
+          <img src="./assets/images/Boroline/Boroline_Hero.png" alt="mock-up of a modern and new Boroline website" loading="eager">
+        </div>
+
+      </div>
+    </section>
+
+     <!========== ! Where is the friction ====================> 
+
+    <section class="friction-section">
+
+    <h2>Where is the friction?</h2>
+
+  
+
+    <!-- 1-->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/Boroline/Bor_olddes_1.png" alt="illustration of a woman trying to book a taxi through app but accidentally clicking auto-update button instead">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+               Legacy trust wasn't reflected in the digital experience.
+            </blockquote>
+
+            <p >
+                The interface felt visually outdated and lacked the clarity and polish users expect from modern e-commerce platforms.
+            </p>
+
+      
+
+
+        </div>
+
+    </div>
+
+        <!-- 2-->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/Boroline/Bor_olddes_2.png" alt="illustration of a woman trying to book a taxi through app but accidentally clicking auto-update button instead">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+               Content-heavy layouts buried important information.
+            </blockquote>
+
+            <p >
+                Long paragraphs and weak visual hierarchy made it difficult for users to quickly understand product benefits or take action.
+            </p>
+
+      
+
+
+        </div>
+
+    </div>
+
+    
+        <!-- 3-->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/Boroline/Bor_olddes_3.png" alt="illustration of a woman trying to book a taxi through app but accidentally clicking auto-update button instead">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+               The purchase journey was fragmented across multiple platforms.
+            </blockquote>
+
+            <p >
+                Browsing happened on Boroline's website, but purchasing redirected users elsewhere, interrupting the shopping flow.
+            </p>
+
+      
+
+
+        </div>
+
+    </div>
+
+            <!-- 4-->
+    <div class="friction-item">
+
+        <div class="friction-images">
+            <img src="assets/images/Boroline/Bor_olddes_6.png" alt="illustration of a woman trying to book a taxi through app but accidentally clicking auto-update button instead">
+            
+        </div>
+
+        <div class="friction-divider">
+            <div class="friction-dot"></div>
+        </div>
+
+        <div class="friction-content">
+
+            <blockquote class="Friction-quote">
+              Users lacked a seamless end-to-end buying experience.
+            </blockquote>
+
+            <p >
+                The absence of integrated shopping functionality introduced additional steps and increased drop-off opportunities.
+            </p>
+
+      
+
+
+        </div>
+
+    </div>
+
+   
+   
+
+</section>
+    
+    <!-- ===== USER GOALS / BUSINESS GOALS ===== -->
+    <section class="cs-section" aria-labelledby="goals-heading">
+      <div class="cs-inner">
+        <div class="cs-goals-grid">
+          <div>
+            <h2 id="goals-heading">How does this impact the user?</h2>
+        
+            <ul class="cs-goal-list">
+              <li>Users feel that the <b>outdated digital experience </b> doesn't match the trust associated with the Boroline brand. </b></li>
+              <li>They experience <b>friction during the buying journey </b> as purchasing requires switching between multiple websites and platforms.</li>
+  
+              <li>The website prioritizes <b>products over use cases, </b> making it harder for new users to discover how Boroline fits into their daily lives.</li>
+              
+
+            </ul>
+          </div>
+          <div>
+            <h2>Why should the business care?</h2>
+            
+              <li><b>Increase conversion rates </b> by creating a seamless end-to-end shopping journey.</li>
+        
+              <li>Increase <b>purchase completion rates.</b> </li>
+              <li><b>Reduce drop-offs </b> caused by fragmented shopping journeys.</li>
+              <li> <b>Strengthen brand relevance </b>with younger digital audiences.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESIGN PROCESS ===== -->
+    <section class="friction-section">
+
+    <h2>Final Re-design</h2>
+
+    <p class="friction-intro">
+        After identifying the friction points, I started to ideate and create a prototype for the re-design of the website. </P>
+
+           <video controls preload="metadata"  width="90%" height="50%"  >
+               <source src="assets/images/Boroline/BorolineScreenRecording.mp4" type="video/mp4">
+               <track kind="captions" src="captions.vtt" srclang="en" label="English">
+              
+             </video>
+
+        <div class="boro-final-des">
+
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/1.png">
+             
+           </div>
+
+        
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/2.png">
+             
+           </div>
+
+        
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/3.png">
+            
+           </div>
+
+        
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/4.png">
+             
+           </div>
+        
+        
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/5.png">
+             
+           </div>
+
+           
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/6.png">
+             
+           </div>
+
+        
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/7.png">
+            
+           </div>
+
+          
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/8.png">
+             
+           </div>
+
+          
+        <div class="boro-img-conainer">
+           <img class="boro-final-img" loading="eager" src="assets/images/Boroline/9.png">
+            
+           </div>
+
+   
+           
+       
+        
+        </div>
+
+    
+
+    <!-- ===== IMPACT & REFLECTIONS ===== -->
+    <section class="cs-section" aria-labelledby="impact-heading">
+      <div class="cs-inner">
+        <div class="cs-two-col">
+          <div>
+            <h2 id="impact-heading">Impact</h2>
+            <ul class="cs-bullet-list">
+              <li>A modernized experience helps align Boroline's digital presence with the trust users already have in the brand.</li>
+              <li>A unified shopping journey reduces friction and improves purchase completion.</li>
+              <li>Highlighting multiple use cases increases product discovery and engagement.</b></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Reflections</h2>
+            <p>This project showed me that redesigning a legacy brand is not about replacing its identity, but translating its values for a modern audience. <br>The challenge was finding the balance between preserving familiarity and creating an experience that meets contemporary user expectations without losing what makes the brand recognizable and trusted.
+</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Next steps ===== -->
+    <section class="cs-section" aria-labelledby="research-heading">
+      <div class="cs-inner">
+        <h2 id="research-heading">Next Steps</h2>
+     <p>  As this project was developed as a desktop-focused capstone project, future iterations would prioritize adapting the experience for mobile devices and smaller screens to ensure accessibility and consistency across platforms. <br>
+
+Further exploration would also focus on responsive layouts, touch-friendly interactions, and optimizing browsing and checkout experiences for mobile users, where a significant portion of e-commerce traffic originates.</p>
+    </section>
+     <!-- ===== other projects ===== -->
+        <section class="my-other-projects" aria-labelledby="research-heading">
+      <div class="other-projects">
+        <h2 id="research-heading">Other projects</h2>
+        <div class="other-proj-img-container">
+
+        <div class="projects-thumbnails"> 
+          <a href=Samsung.html class="other-proj-link">
+           <img src="assets/images/samsung-thumnail.png" class="other-proj-img" alt="soda shake race thumbnail"> </a>
+              <figcaption> <a href=Samsung.html class="other-proj-link"> Samsung</a>
+              </figcaption> 
+        </div>
+        
+         <div class="projects-thumbnails"> <a href=SodaShakeRace.html class="other-proj-link">
+           <img src="assets/images/sodashakerace-thumnail.png" class="other-proj-img" alt="soda shake race thumbnail"></a>
+             <figcaption> <a href=SodaShakeRace.html class="other-proj-link">Soda Shake Race </a></figcaption>
+           </div>
+      </div>
+      
+            
+    </section>
+     <!-- ============ Contact info ============ -->
+     <section class="contact-me" id="contact-me">
+      <div class="contact-heading"> <h2> Enjoyed my work? Let's chat.</h2>
+  <div class="contact-icons"></div> 
+  </div> 
+  <div class="contact-list">
+   <ul class="contact information"> 
+    <li class="contact-list"> <img class="contact-icons" src="assets\images\email-svgrepo-com.svg" alt="email icon"> <a href="mailto:lavanyadhyani30@gmail.com" class="contact-links" target="_blank">lavanyadhyani30@gmail.com </a></li> 
+    <li class="contact-list"> <img class="contact-icons" src="assets\images\instagram-svgrepo-com.svg" alt="instagram logo icon"> <a href="https://www.instagram.com/turtle_sambar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="contact-links" target="_blank">turtle_sambar</a></li> 
+    <li class="contact-list"> <img class="contact-icons" src="assets\images\linkedin-svgrepo-com.svg" alt="Linkedin logo icon"> <a href="https://www.linkedin.com/in/lavanya-dhyani-18b6351b6/" class="contact-links" target="_blank">Lavanya Dhyani</a></li> 
+   </ul>
+  </div>
+     <a href="https://forms.gle/J1qHpNPvdezKKwYs8" target="_blank">
+     <button class="body-button"> Contact form
+  </button> </a>
+ </section>
+
+   <p class="copyright"> The website and its work are properties of Lavanya Dhyani, 2026 &copy;</p>
+
+  </main>
+
+  <button id="backToTop" aria-label="Go to top">
+    ↑
+</button>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/slow-scroll.js"></script>
+</body>
+</html>
