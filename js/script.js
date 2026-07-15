@@ -255,4 +255,23 @@ backToTopButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+const heroTitles = document.querySelectorAll(".hero-title-reveal");
+
+const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            heroObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+heroTitles.forEach(title => {
+    heroObserver.observe(title);
+});
+
+
 });
