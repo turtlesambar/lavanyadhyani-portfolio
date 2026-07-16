@@ -273,5 +273,12 @@ heroTitles.forEach(title => {
     heroObserver.observe(title);
 });
 
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    document.querySelector(".cityscape")
+        .style.transform = `translateX(-${scroll * 0.2}px)`;
+});
+
+
 
 });
